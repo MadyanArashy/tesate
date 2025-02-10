@@ -1,4 +1,5 @@
 import { View, Text, SafeAreaView, ScrollView, Image, Dimensions, } from 'react-native';
+import { useNavigation } from 'expo-router';
 import React, { useState } from 'react';
 import tw from 'twrnc';
 const windowWidth = Dimensions.get('window').width;
@@ -10,6 +11,7 @@ import SelectableButton from '@/components/SelectableButton';
 
 const detail = () => {
   
+  const navigation = useNavigation();  
   const router = useRouter();
 
   const [amount, setAmount] = useState(0);
